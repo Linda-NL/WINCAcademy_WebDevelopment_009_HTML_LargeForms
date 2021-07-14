@@ -1,0 +1,646 @@
+/* MOBILE FIRST DESIGN */
+
+/* achtergrondkleur van de gehele website.*/
+body {   
+    /* backgrounds & borders */
+    background-color: rgb(252,216,183);
+}
+
+/* box-model en layout van de body. */
+#container-body {   
+    /* box model */
+    max-width: 1200px;
+    width: auto;
+    /* layout */
+    margin: auto;
+}
+
+/* layout van de header. */
+.container-site-header {     
+    /* layout */
+    margin: 30px 0;
+    margin: auto;
+    width: auto;
+    /* backgrounds & borders */
+    background-color: none;
+    border-style: none none dotted none;
+    border-color: rgb(0,0,0);
+    border-width: 8px;   
+}
+
+    /* layout van de hoofdtitel van de website. */
+    .site-title h1 {
+        /* layout */
+        margin: 18px 0;
+        padding: 0;
+        /* typography */
+        text-align: right;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: 24px;
+        color: rgb(232,82,82);
+    }
+
+    /* layout van de navigatiebalk: vorm& kleur = PARENT */
+    .primary-navigation {   
+        /* box model */
+        min-height: 60px;
+        height: auto;
+        width: auto;
+        /* layout */
+        margin: 18px 0; /* Dit zorgt voor de afstand tot de border van box-1, waar deze IN zit */
+        display: flex; /* display & align-items zorgen er samen voor dat de child-items verticaal uitlijnen */
+        align-items: center;
+        /* backgrounds & borders */
+        background-color: rgb(127,169,178);
+    }
+  
+        /* layout van de navigatielijst als geheel = CHILD */
+        .primary-navigation ul { 
+            /* layout */
+            margin: 0;
+            margin: auto;
+            padding: 0;
+            /* typography */
+            list-style: none;
+        }
+        
+        /* layout van de individuele navigatie-links */
+        .primary-navigation li {
+            /* layout */
+            display: inline; /* Dit zorgt er voor dat de hyperlinks naast elkaar staan */
+            padding: 0 18px 0 0; /* Dit zorgt voor de ruimte tussen de list-items */
+        }
+
+        .primary-navigation a {
+            /* typography */
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgb(0,0,0);
+        }
+
+        .primary-navigation a:hover {
+            /* typography */
+            color: rgb(252,216,183);
+        }
+
+/* layout van de main: basisbreedte & kleur. */               
+.container-main {     
+    /*box model*/
+    min-width: 414px;
+    max-width: 1200px;
+    width: auto;
+    /* layout */
+    margin: 18px 0;
+    display: flex;
+    align-items: left;
+    /* backgrounds & borders */
+    background-color: rgb(255,255,255);
+}
+
+        .vertical-line-1 {
+            /* box model */
+            height: auto;
+            /* layout */
+            display: inline-block;
+            margin: 0;
+            /* backgrounds & borders */
+            background-color: rgb(232,82,82);
+            border-style: none none none solid;
+            border-color: rgb(232,82,82);
+            border-width: 20px;
+            
+            /* De vervangende code hieronder (vlak ipv border) krijg ik vooralsnog niet goed werkend: LATER UITZOEKEN
+            /* box model *
+            height: auto;
+            width: 20px;     /* WAAROM? heb ik hier opeens zoveel meer px nodig dan de 20px van de border? *
+            /* layout *
+            display: inline-block;
+            margin: 0;
+            /* backgrounds & borders *
+            background-color: rgb(232,82,82);
+            */
+        }
+
+        .vertical-line-2 {
+            /* box model */
+            height: auto;
+            /* layout */
+            display: inline-block;
+            margin-left: 8px;
+            /* backgrounds & borders */
+            background-color: rgb(127,169,178);
+            border-style: none none none solid;
+            border-color: rgb(127,169,178);
+            border-width: 4px;
+        }
+
+        /* layout van de main: ruimte voor alle content. */
+        #content-space {
+            /* layout */
+            margin: 27px
+        }
+
+        .main-header {
+            /* box model */
+            width: auto;
+            height: auto;
+            /* layout */
+            margin: 60px auto 0 auto;
+            padding: 18px;
+            /* backgrounds & borders */
+            background-color: rgb(127,169,178);
+            /* typography */
+            color:rgb(255,255,255);
+        }
+
+        .main-header p {
+            /* box model */
+            width: auto;
+            height: auto;
+            /* layout */
+            padding-left: 18px;
+            padding-right: 19px;
+            /* backgrounds & borders */
+            border-style: none none none solid;
+            border-color: rgb(255,255,255);
+            border-width: 2px; 
+            /* typography */
+            text-align: left;
+            font-family: 'Arial Narrow', Arial, sans-serif;
+            font-weight: lighter;
+            font-size: 20px;
+            line-height: 2em; 
+            color:rgb(255,255,255);
+        }
+
+        .container-articles {
+            /* layout */
+            padding: 30px 0;
+            
+        }
+
+        /* styling van de tekst: algemeen */
+        a {
+            /* typography */
+            text-decoration: none;
+            color:rgb(0,110,137);
+        }
+        
+        a:hover {
+            /* typography */
+            color: rgb(232,82,82);
+        }
+
+        hr.line-break {
+            /* layout */
+            margin: 36px 180px;
+            /* backgrounds & borders */
+            border: solid 1px rgb(232,82,82);
+        }
+
+        /* styling van de tekst: artikelen */
+        .article-style-1 {
+            /* layout */
+            padding: 18px 27px 18px 0;
+            /* typography */
+            font-family: 'Arial Narrow', Arial, sans-serif;
+            font-weight: lighter;
+            font-size: 18px;
+            line-height: 1.8em;
+        }
+
+        .article-style-1 h2 {
+            /* typography */
+            font-family: 'Arial Narrow', Arial, sans-serif;
+            font-size: 30px;
+            color: rgb(0,110,137);
+        }
+        
+        .article-style-1 h3 {
+            /* typography */
+            font-family: 'Arial Narrow', Arial, sans-serif;
+            font-size: 22px;
+            color: rgb(0,110,137);  
+        }
+        
+        .article-style-1 .quote {
+            /* layout */
+            margin: 27px;
+            padding: 18px;
+            /* backgrounds & borders */
+            background-color: rgb(252,216,183);
+            border-radius: 18px;
+            /* typography */
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 24px;
+            line-height: 1.8em;
+            color: rgb(238,130,79);
+        }
+
+        /* styling van de tekst: asides */
+        .container-aside-bottom { /* PARENT */
+            /* layout */
+            margin: auto;
+            padding: 18px 0 60px 0; /* Dit werkt als het kader waarbinnen de 2 asides staan */
+            align-items: center; /* verticaal centreren */
+            justify-content: center; /* horizontaal centreren */
+        }
+ 
+        .container-aside-bottom-left {    /* CHILD */
+            /* layout */
+            margin: auto;
+            padding: min(18px);
+        }
+
+        .container-aside-bottom-right {   /* CHILD */
+            /* layout */
+            margin: auto;
+            padding: min(18px);
+        }
+       
+        .aside-style-1 {
+            /* box-model */
+            min-width: 100px;
+            max-width: auto;
+            width: auto;
+            /* layout */
+            padding: 18px; /* afstand tot box-with-border IN de STYLE-div */
+            display: inline-block;
+            align-items: center; /* verticaal centreren */
+            /* backgrounds & borders */
+            background-color: rgb(232,82,82);
+            border-radius: 18px;
+            /* typography */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 16px;
+            line-height: 1.5em;
+        }
+
+        .aside-style-1 .box-with-border {
+            /* layout */
+            padding: 27px; /* afstand tot tekst IN DIV "box-with-border" */
+            /* backgrounds & borders */
+            border-radius: 18px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(255,255,255);
+        }
+
+        .aside-style-1 h2 {
+            /* typography */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1.5em;
+            color: rgb(0,0,0)
+        }
+
+        .aside-style-1 p {
+            /* typography */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 16px;
+            line-height: 1.5em;
+        }
+
+        .container-footer {  /* layout van de footer. */
+            /* layout */
+            margin: 30px 0;
+            /* backgrounds & borders */
+            background-color: none;    
+            border-style: dotted none none none;
+            border-color: rgb(0,0,0);
+            border-width: 8px; 
+        }
+
+            #copyright {
+                /* layout */
+                margin-top: 12px;
+                margin-bottom: 30px;
+                /* typography */
+                text-align:right;
+                font-family: 'Arial Narrow', Arial, sans-serif;
+                font-size: 14px;
+                color: rgb(232,82,82);
+            }
+
+            a.webdeveloper {
+                /* typography */
+                text-decoration: none;
+                font-family: 'Arial Narrow', Arial, sans-serif;
+                font-weight: bold;
+                font-size: 14px;
+                color: rgb(232,82,82);
+            }
+
+            a:hover.webdeveloper {
+                /* typography */
+                color: rgb(238,130,79);
+            }
+
+
+/* CONTACT-FORM STYLING */
+
+.container-contact {
+    /* layout */
+    padding: 30px 0;
+}
+
+.contact-form {     
+    /* box model */
+    height: auto;
+    width: auto;
+    /* layout */
+    margin: auto;
+    padding: 18px;
+    display: none;
+    display: block;
+    /* backgrounds & borders */
+    background-color: rgb(252,216,183);
+    /* typography */
+    text-align: center; /* het uitlijnen van input doe je met text-align en niet met align-items */
+    text-decoration: none;
+}
+
+.user-info {
+    /* box model */
+    height: auto;
+    width: auto;
+    /* layout */
+    margin: auto;
+    padding: 18px;
+    padding-bottom: 0;
+    /* backgrounds & borders */
+    background-color: rgb(252,216,183);
+    border-style: none none solid none;
+    border-color: rgb(0,110,137);
+    border-width: 1px;
+    /* typography */
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: rgb(0,0,0);
+}
+
+.contact-form textarea {
+    /* box model */
+    height: auto;
+    width: 500px;
+    /* backgrounds & borders */
+    background-color: rgb(255,255,255);
+    /* typography */
+    text-decoration: none;
+    text-align: left;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: rgb(0,0,0);
+}
+
+.button-submit {
+    /* layout */
+    padding: 0 27px;
+    /* backgrounds & borders */
+    background-color: rgb(252,216,183);
+    border-style: solid;
+    border-color: rgb(0,110,137);
+    border-width: 3px;
+    /* typography */
+    text-decoration: none;
+    text-align: center;
+}
+
+.button-submit p {
+    /* layout */
+    padding: 0;
+    /* typography */
+    font-style: lighter;
+    font-size: 18px;
+    color: rgb(0,110,137);
+}
+
+
+/* QUESTIONARY FORM STYLING */
+
+.container-contact {
+    /* layout */
+    padding: 30px 0;
+}
+
+.form-questionary {     
+    /* box model */
+    height: auto;
+    width: auto;
+    /* layout */
+    margin: auto;
+    padding: 18px;
+    display: none;
+    display: block;
+    /* backgrounds & borders */
+    background-color: rgb(252,216,183);
+    /* typography */
+    text-align: center; /* het uitlijnen van input doe je met text-align en niet met align-items */
+    text-decoration: none;
+}
+
+.form-questionary p {
+    /* typography */
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: rgb(0,110,137);  
+
+}
+
+.form-questionary p2 {
+    /* typography */
+    text-align: left;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: rgb(0,0,0);
+
+}
+
+.form-questionary textarea {
+    /* box model */
+    height: auto;
+    width: 500px;
+    /* backgrounds & borders */
+    background-color: rgb(255,255,255);
+    /* typography */
+    text-decoration: none;
+    text-align: left;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: rgb(0,0,0);
+}
+
+.button-reset {
+    /* layout */
+    padding: 0 27px;
+    /* backgrounds & borders */
+    background-color: rgb(252,216,183);
+    border-style: solid;
+    border-color: rgb(232,82,82);
+    border-width: 3px;
+    /* typography */
+    text-decoration: none;
+    text-align: center;
+}
+
+.button-reset p {
+    /* layout */
+    padding: 0;
+    /* typography */
+    font-weight: lighter;
+    font-size: 18px;
+    line-height: 1em;
+    color: rgb(232,82,82);  
+}
+
+
+
+/* DESKTOP STYLING */
+
+@media screen and (min-width:1024px) {
+    body{   
+        /* backgrounds & borders */
+        background-color: rgb(217,222,223);
+    }
+
+    .site-title h1 {
+        font-size: 36px;
+        color: rgb(232,82,82);
+    }
+
+    .main-header {
+        /* backgrounds & borders */
+        background-color: rgb(232,82,82);
+    }
+
+    .main-header p {
+        /* typography */
+        font-size: 24px;
+        line-height: 2.2em; 
+    }
+    
+    .article-style-1 {
+       /* typography */
+        font-size: 21px;
+        line-height: 2em;
+    }
+
+    .article-style-1 h2 {
+        /* typography */
+        font-size: 34px;
+        color: rgb(232,82,82);
+    }
+    
+    .article-style-1 h3 {
+        /* typography */
+        font-size: 28px;
+        color: rgb(232,82,82);  
+    }
+    
+    .article-style-1 .quote {
+        /* typography */
+        font-size: 28px;
+        line-height: 2.2em;
+        color: rgb(238,130,79);
+    }
+
+    /* styling van de tekst: asides */
+    .container-aside-bottom{ /* PARENT */
+        /* layout */
+        margin: auto;
+        padding: 18px 0 60px 0; /* Dit werkt als het kader waarbinnen de 2 asides staan */
+        display: flex;
+        align-items: center; /* verticaal centreren */
+        justify-content: center; /* horizontaal centreren */
+    }
+
+    .container-aside-bottom-left{    /* CHILD */
+        /* layout */
+        margin: auto;
+        padding-right: min(18px);
+    }
+
+    .container-aside-bottom-right{   /* CHILD */
+        /* layout */
+        margin: auto;
+        padding-left: min(18px);
+    }
+   
+    .aside-style-1{
+        /* box-model */
+        min-width: 100px;
+        max-width: 414px;
+        width: auto;
+        /* layout */
+        padding: 18px; /* afstand tot box-with-border IN de STYLE-div */
+        display: inline-block;
+        /* backgrounds & borders */
+        background-color: rgb(127,169,178);
+        /* typography */
+        font-size: 20px;
+        line-height: 2em;
+    }
+
+    .aside-style-1 h2 {
+        /* typography */
+        font-size: 20px;
+        line-height: 2em;
+    }
+
+    .aside-style-1 p{
+        /* typography */
+        font-size: 18px;
+        line-height: 1.8em;
+    }
+
+    .user-info {
+        /* backgrounds & borders */
+        border-color: rgb(232,82,82);
+        border-width: 2px;
+    }
+    
+    .button-submit {
+        /* backgrounds & borders */
+        border-color: rgb(232,82,82);
+    }
+
+    .button-submit p {
+        /* typography */
+        font-size: 20px;
+        line-height: 1em;
+        color: rgb(232,82,82);
+    }
+
+    .form-questionary p {
+        /* typography */
+        font-size: 28px;
+        color: rgb(232,82,82);  
+    
+    }
+    
+    .button-reset {
+        /* backgrounds & borders */
+        border-color: rgb(0,110,137); 
+    }
+
+    .button-reset p {
+        /* typography */
+        font-size: 20px;
+        line-height: 1em;
+        color: rgb(0,110,137); 
+    }
+
+}
